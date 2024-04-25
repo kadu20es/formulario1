@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="actions2.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Formulario 1</h1>
+        <form action="">
+            <label for="nome" id="labelNome">Nome:
+                <input type="text" name="nome" id="nome" minlength="3" pattern="[A-Za-z]" required/>
+            </label>
+            <label for="sobrenome" id="labelSobrenome">Sobrenome:
+                <input type="text" name="sobrenome" id="sobrenome" minlength="5" pattern="[A-Za-z]" required/>
+            </label>
+            <label for="email" id="labelEmail">E-mail:
+                <input type="email" name="email" id="email" required/>
+            </label>
+            <label for="senha" id="labelSenha">Senha:
+                <input type="password" name="senha" id="senha" required minlength="6" title="A senha deve conter pelo menos 6 caracteres, incluindo letras maiúsculas e minúsculas, números e/ou caracteres especiais"/>
+            </label>
+            <label for="confirmaSenha" id="labelConfirmaSenha">Confirmação de senha:
+                <input type="password" name="confirmaSenha" id="confirmaSenha" required minlength="6"/>
+            </label>
+            <button id="btn">Enviar</button>
+        </form>
+        <div id="validacao">
+            <p id="minuscula" class="invalid">Uma letra minúscula</p>
+            <p id="maiuscula" class="invalid">Uma letra maiúscula</p>
+            <p id="numero" class="invalid">Um número</p>
+            <p id="especial" class="invalid">Um caractere especial</p>
+            <p id="tamanho" class="invalid">Pelo menos 6 caracteres</p>
+        </div>
+    </main>
+</body>
+</html>
