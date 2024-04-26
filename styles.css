@@ -34,7 +34,6 @@ h1 {
 }
 
 form {
-    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +41,8 @@ form {
     border: 1px solid rgb(32, 50, 113);
     padding: 15px;
     border-radius: 8px;
+    width: 60%;
+    min-width: fit-content;
 }
 
 label {

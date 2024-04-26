@@ -46,14 +46,6 @@ function verificarSenha() {
     } else {
         tamanho.style.color = "#e6281e";
     }
-
-    console.log(checarMinuscula(temp))
-    console.log(checarMaiuscula(temp))
-    console.log(checarDigito(temp))
-    console.log(checarEspecial(temp))
-    console.log(checarTamanho(temp))
-
-    console.log(temp)
 }
 
 const psw = document.querySelector("#senha");
@@ -70,10 +62,19 @@ psw.addEventListener("keydown", (e) => {
     }
 });
 
+function imprimirmensagem(identificador, mensagem){
+    console.error(identificador, mensagem)
+    const label = document.getElementById(identificador);
+    element.innerHTML = mensagem;
+    console.log(label)
+    label.appendChild(element);
+    return;
+}
 
 function validate(event) {
     event.preventDefault();
 
+    const formulario = document.querySelector("form");
     const nome = document.querySelector("#nome").value;
     const sobrenome = document.querySelector("#sobrenome").value;
     const email = document.querySelector("#email").value;
@@ -120,12 +121,8 @@ function validate(event) {
         email,
         senha
     }
-}
 
-function imprimirmensagem(identificador, mensagem){
-    console.error(identificador, mensagem)
-    const label = document.getElementById(identificador);
-    element.innerHTML = mensagem;
-    label.appendChild(element);
-    return;
+    console.log(pessoa);
+    formulario.reset()
+    
 }
