@@ -27,14 +27,19 @@
                 <input type="password" name="confirmaSenha" id="confirmaSenha" required minlength="6"/>
             </label>
             <button id="btn">Enviar</button>
+
+            <div id="validacao">
+                <p class="validador">Atente-se para os requisitos de senha:</p>
+                <ul>
+                    <li id="minuscula" class="invalid">Uma letra minúscula</li>
+                    <li id="maiuscula" class="invalid">Uma letra maiúscula</li>
+                    <li id="numero" class="invalid">Um número</li>
+                    <li id="especial" class="invalid">Um caractere especial</li>
+                    <li id="tamanho" class="invalid">Pelo menos 6 caracteres</li>
+                </ul>
+            </div>
         </form>
-        <div id="validacao">
-            <p id="minuscula" class="invalid">Uma letra minúscula</p>
-            <p id="maiuscula" class="invalid">Uma letra maiúscula</p>
-            <p id="numero" class="invalid">Um número</p>
-            <p id="especial" class="invalid">Um caractere especial</p>
-            <p id="tamanho" class="invalid">Pelo menos 6 caracteres</p>
-        </div>
+        
     </main>
 </body>
 </html>

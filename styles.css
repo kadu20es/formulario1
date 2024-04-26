@@ -7,13 +7,14 @@
 }
 
 body {
+    padding: 10vh 0;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
-    background: linear-gradient(180deg, rgb(36, 0, 32) 0%, rgb(121, 9, 117) 35%, rgb(45, 123, 231) 100%);
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgb(36, 0, 32) 0%, rgb(121, 9, 117) 38%, rgb(45, 123, 231) 100%);
 }
 
 main {
@@ -33,6 +34,7 @@ h1 {
 }
 
 form {
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +54,7 @@ label {
 }
 
 input {
-    width: 300px;
+    width: 20em;
     line-height: 2em;
     font-size: 1em;
     font-weight: bold;
@@ -71,7 +73,7 @@ input:focus-within {
 }
 
 button {
-    width: 100%;
+    width: 26em;
     padding: 10px;
     color: #FFF;
     border: none;
@@ -89,7 +91,19 @@ button:hover {
     color: #e6281e;
 }
 
-.invalid {
-    border-bottom: 2px solid #e6281e;
+#validacao {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+
+    .validador {
+        font-weight: bold;
+        line-height: 3em;
+    }
+
+    ul > li {
+        margin-left: 1em;
+    }
 }
 

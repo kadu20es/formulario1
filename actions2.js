@@ -33,15 +33,25 @@ function verificarSenha() {
         return esp.test(temp);
     });
 
+    const checarTamanho = ((temp) => {
+        return temp.length
+    })
+
     checarMinuscula(temp) ? minuscula.style.color = "#408c49" : minuscula.style.color = "#e6281e";
     checarMaiuscula(temp) ? maiscula.style.color = "#408c49" : maiscula.style.color = "#e6281e";
     checarDigito(temp) ? numero.style.color = "#408c49" : numero.style.color = "#e6281e";
     checarEspecial(temp) ? especial.style.color = "#408c49" : especial.style.color = "#e6281e";
+    if (checarTamanho(temp) >= 6) {
+        tamanho.style.color = "#408c49";
+    } else {
+        tamanho.style.color = "#e6281e";
+    }
 
     console.log(checarMinuscula(temp))
     console.log(checarMaiuscula(temp))
     console.log(checarDigito(temp))
     console.log(checarEspecial(temp))
+    console.log(checarTamanho(temp))
 
     console.log(temp)
 }
